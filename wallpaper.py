@@ -4,7 +4,7 @@ import sys
 import os
 
 def remove_old_wallpapers(folder):
-	jpg_file_list = filter(lambda x : x.find('pwm') == 0 and x.endswith('1920x1080.jpg'), os.listdir(folder))
+	jpg_file_list = filter(lambda x : x.find('pwm_') == 0 and x.endswith('1920x1080.jpg'), os.listdir(folder))
 	jpg_file_list.sort(key=lambda x : os.path.getmtime(), reverse = True)
 	while len(jpg_file_list) > max_wallpapers:
 		os.remove(jpg_file_list.pop())
