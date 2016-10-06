@@ -9,7 +9,6 @@ def remove_old_wallpapers(folder):
 	while len(jpg_file_list) > max_wallpapers:
 		os.remove(jpg_file_list.pop())
 		
-
 # Maximum number of wallpapers to keep
 max_wallpapers = 10
 home_folder = os.path.expanduser('~')
